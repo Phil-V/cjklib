@@ -611,7 +611,7 @@ class ReadingOperatorReferenceTest(ReadingOperatorTest):
                                     repr(decomposition)) \
                             + ' (reading %s, dialect %s)' \
                                 % (self.READING_NAME, dialect))
-                    except exception.DecompositionError, e:
+                    except exception.DecompositionError as e:
                         self.fail(
                             'DecompositionError for %s with target %s: %s' \
                                 % (repr(reference), repr(target), repr(e)) \
@@ -635,7 +635,7 @@ class ReadingOperatorReferenceTest(ReadingOperatorTest):
                                     repr(composition)) \
                             + ' (reading %s, dialect %s)' \
                                 % (self.READING_NAME, dialect))
-                    except exception.CompositionError, e:
+                    except exception.CompositionError as e:
                         self.fail('CompositionError for %s with target %s: %s' \
                             % (repr(reference), repr(target), repr(e)) \
                             + ' (reading %s, dialect %s)' \

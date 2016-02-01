@@ -15,7 +15,7 @@ LICENSE = cjklib.__license__
 setup(name='cjklib',
     version=VERSION,
     description='Han character library for CJKV languages',
-    long_description=open('README').read(),
+    long_description=open('README', encoding="utf-8").read(),
     author=AUTHOR,
     author_email=EMAIL,
     url=URL,

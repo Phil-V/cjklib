@@ -1477,7 +1477,7 @@ class PinyinOperator(TonalRomanisationOperator):
 
     @cachedmethod
     def getTones(self):
-        tones = range(1, 6)
+        tones = list(range(1, 6))
         if self.toneMarkType == 'none' \
             or (self.missingToneMark == 'noinfo' \
                 and self.toneMarkType == 'numbers'):

@@ -282,7 +282,7 @@ class EntryGeneratorBuilder(TableBuilder):
     def getEntryDict(self, generator):
         entryList = []
 
-        firstEntry = next(generator)
+        firstEntry = generator.next() # custom next() method instead of py3 built-in
         if type(firstEntry) == type(dict()):
             entryList.append(firstEntry)
 
@@ -438,7 +438,7 @@ class UnihanGenerator:
             entry = {}
 
     def getHandles(self):
-        """ 
+        """
         Returns a list of handles of the Unihan database files.
 
         :rtype: dict
